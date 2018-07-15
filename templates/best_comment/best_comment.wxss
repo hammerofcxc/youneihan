@@ -1,0 +1,91 @@
+/* msg */
+
+.best-comment {
+  margin-top: 3px;
+  padding: 12px;
+  background: #F8F8FF;
+}
+
+.best-comment-head {
+  display: flex;
+  margin-top: 20rpx;
+  align-items: center;
+  width: 100%;
+}
+
+.left-head {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.best-user-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  background: white;
+}
+
+.best-user-name {
+  font-size: 12px;
+  margin-left: 6px;
+  color: #4F4F4F;
+  margin-bottom: 10rpx;
+  overflow: hidden;
+}
+
+.msg-text {
+  margin-top: 16rpx;
+}
+
+.msg-image {
+  margin-top: 16rpx;
+  width: 100%;
+  height: 200rpx;
+}
+
+.right {
+  display: inline-block;
+  height: 85rpx;
+  width: 20%;
+  background: #F8F8FF;
+}
+
+.right-item {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  vertical-align: text-bottom;
+  text-align: center;
+}
+
+.right-item-content {
+  display: inline-block;
+  height: 100%;
+  color: #909090;
+}
+
+.right-item-content image {
+  width: 45rpx;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.right-item-content text {
+  font-size: 23rpx;
+  vertical-align: middle;
+  margin-top: 10rpx;
+  display: inline-block;
+}
+
+.right-item-pressed-text {
+  color: red;
+}
+
+.vote_best_title {
+  font-size: 13px;
+  padding: 8rpx;
+  color: white;
+  background-color: #FF82AB;
+}

@@ -1,0 +1,32 @@
+<import src="../../templates/msg_cell/msg_cell.wxml"/>
+<view class="page">
+<view class="top-tab">
+    <view class="top-tab-item {{curTabIndex==idx ? 'active' : ''}}" wx:key="" wx:for="{{swiperList}}"
+          wx:for-index="idx" data-idx="{{idx}}" bindtap="switchTab">
+        {{item.title}}
+    </view>
+</view>
+
+<swiper class="swiper" current="{{curTabIndex}}" bindchange="bindChange" duration="300"
+        style="height:{{swiperHeight}}px">
+    <block wx:for="{{swiperList}}" wx:for-item="swiperItem" wx:key="">
+        <swiper-item>
+            <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData" scroll-into-view="{{toView}}">
+                <view id="{{swiperItem.title}}" style="height:10rpx"/>
+                <view class="item-view" wx:for="{{swiperItem.dataList}}" wx:for-item="item" wx:key="{{item.id}}">
+                    <navigator hover-class="none" url="../detail/detail?id={{item.id}}">
+                        <template is="msg_cell" data="{{item}}"/>
+                    </navigator>
+                </view>
+                <view style="height:10rpx"/>
+            </scroll-view>
+        </swiper-item>
+    </block>
+
+</swiper>
+
+<button class="bottom_mode" hover-class="bottom-button-hover" style="width:50px;height:50px;" bindtap="changeMode">{{curMode}}</button>
+
+<image class="bottom_refresh" style="width:50px;height:50px" src="../../resources/images/refresh.png" bindtap="refreshNewData"/>
+
+</view>

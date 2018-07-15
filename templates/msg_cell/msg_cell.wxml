@@ -1,0 +1,49 @@
+<import src="../../templates/best_comment/best_comment.wxml" />
+<template name="msg_cell">
+  <view class="msg-cell" hidden="{{(item.image == null) && (item.media_type != 0)}}">
+    <view class="msg-cell-head">
+      <image class="user-image" src="{{item.user.avatar_url}}" />
+      <text class="user-name">{{item.user.name}}</text>
+    </view>
+    <view style="line-height:1.5;" class="msg-text">{{item.content}}</view>
+    <image hidden="{{!item.image}}" data-item="{{item}}" catchtap="imagePreview" style="width:{{item.image.r_width}}px;height:{{item.image.r_height}}px" class="msg-image" src="{{item.image.url_list[0].url}}" />
+
+     <template wx:if="{{item.best_comment }}" is="best_comment" data="{{item:item.best_comment}}" /> 
+  </view>
+
+  <!--底部-->
+  <view class="bottom" hidden="{{(item.image == null) && (item.media_type != 0)}}">
+
+    <!--赞-->
+    <view class="bottom-item" data-item="{{item}}" catchtap="voteUpTap">
+      <view class="bottom-item-content" wx:if="{{item.voteType != '1'}}">
+        <image class="bottom-icon" src="../../resources/images/vote_up.png" mode="aspectFit" />
+        <text class="bottom-item-zan-text">{{item.like_count}}</text>
+      </view>
+      <view class="bottom-item-content" wx:if="{{item.voteType == '1'}}">
+        <image class="bottom-icon" src="../../resources/images/vote_up_pressed.png" mode="aspectFit" />
+        <text class="bottom-item-pressed-text">{{item.like_count + 1}}</text>
+      </view>
+    </view>
+
+    <!--踩-->
+    <view class="bottom-item" data-item="{{item}}" catchtap="voteDownTap">
+      <view class="bottom-item-content" wx:if="{{item.voteType != '0'}}">
+        <image class="bottom-icon" src="../../resources/images/vote_down.png" mode="aspectFit" />
+        <text class="bottom-item-zan-text">{{item.dislike_count}}</text>
+      </view>
+      <view class="bottom-item-content" wx:if="{{item.voteType == '0'}}">
+        <image class="bottom-icon" src="../../resources/images/vote_down_pressed.png" mode="aspectFit" />
+        <text class="bottom-item-pressed-text">{{item.dislike_count + 1}}</text>
+      </view>
+    </view>
+
+    <!--评论-->
+    <view class="bottom-item">
+      <view class="bottom-item-content">
+        <image class="bottom-icon" src="../../resources/images/comment.png" mode="aspectFit" />
+        <text class="bottom-item-zan-text">{{item.comment_count}}</text>
+      </view>
+    </view>
+  </view>
+</template>

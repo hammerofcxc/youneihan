@@ -1,0 +1,26 @@
+<template name="best_comment">
+  <view hidden="{{!item.content}}" class="best-comment">
+        <text class="vote_best_title" >{{"神评论"}}</text>
+    <view class="best-comment-head">
+      <view class="left-head">
+         <image class="best-user-image" src="{{item.user.avatar_url}}"/> 
+        <text class="best-user-name">{{item.user.name}}</text>
+      </view>
+      <view class="right">
+
+        <!--赞-->
+        <view class="right-item" data-item="{{item}}" catchtap="commentLoveTap">
+          <view class="right-item-content" wx:if="{{item.commentVoteType != '1'}}">
+            <image src="../../resources/images/vote_up.png" mode="aspectFit"/>
+            <text class="right-item-zan-text">{{item.like_count}}</text>
+          </view>
+          <view class="right-item-content" wx:if="{{item.commentVoteType == '1'}}">
+            <image src="../../resources/images/vote_up_pressed.png" mode="aspectFit"/>
+            <text class="right-item-pressed-text">{{item.like_count+1}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view style="line-height:1.5;" class="msg-text">{{item.content}}</view>
+  </view>
+</template>

@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/msg/msg",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#363636",
+    "navigationBarTitleText": "爆笑内涵lite",
+    "navigationBarTextStyle": "#ffffff"
+  }
+}

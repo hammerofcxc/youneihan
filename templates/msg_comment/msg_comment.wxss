@@ -1,0 +1,90 @@
+/* msg */
+
+.msg-comment {
+  margin-top: 3px;
+  padding: 12px;
+  background: white;
+}
+
+.msg-comment-head {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.left-head {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: white;
+}
+
+.user-name {
+  font-size: 12px;
+  margin-left: 12rpx;
+  color: #4F4F4F;
+  margin-bottom: 10rpx;
+  overflow: hidden;
+}
+
+.msg-text {
+  margin-top: 16rpx;
+}
+
+.msg-image {
+  margin-top: 16rpx;
+  width: 100%;
+  height: 200rpx;
+}
+
+.comment-cut-line {
+  height: 2rpx;
+  width: 100%;
+  background-color: lightgray;
+  float: right;
+}
+
+.right {
+  display: inline-block;
+  height: 85rpx;
+  width: 20%;
+  background: white;
+}
+
+.right-item {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  vertical-align: text-bottom;
+  text-align: center;
+}
+
+.right-item-content {
+  display: inline-block;
+  height: 100%;
+  color: #909090;
+}
+
+.right-item-content image {
+  width: 45rpx;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.right-item-content text {
+  font-size: 12px;
+  vertical-align: middle;
+  margin-top: 10rpx;
+  display: inline-block;
+}
+
+.right-item-pressed-text {
+  color: red;
+}

@@ -1,0 +1,19 @@
+<import src="../../templates/msg_cell/msg_cell.wxml" />
+<import src="../../templates/msg_comment/msg_comment.wxml" />
+
+<view class="page">
+  <template is="msg_cell" data="{{item}}" />
+  <view>
+    <view class="cut-line"></view>
+    <text wx:if="{{hotCommentList.length != 0}}" class="comment-hot">{{"热门评论"}}</text>
+    <block wx:for="{{hotCommentList}}" wx:key="">
+      <template is="msg_comment" data="{{item}}" />
+    </block>
+    <view wx:if="{{hotCommentList.length != 0}}" class="cut-line"></view>
+    <text wx:if="{{newCommentList.length == 0}}" class="comment-new">{{"暂无评论"}}</text>
+    <text wx:if="{{newCommentList.length != 0}}" class="comment-new">{{"最新评论"}}</text>
+    <block wx:for="{{newCommentList}}" wx:key="">
+      <template is="msg_comment" data="{{item}}" />
+    </block>
+  </view>
+</view>

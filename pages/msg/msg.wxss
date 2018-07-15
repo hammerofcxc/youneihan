@@ -1,0 +1,76 @@
+@import "../../templates/msg_cell/msg_cell.wxss";
+@import "../../templates/best_comment/best_comment.wxss";
+
+.swiper {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border: 0;
+  margin-top: 37px;
+  background-color: #eaeaea;
+}
+
+.scrollView {
+  height: 100%;
+  background-color: #eaeaea;
+}
+
+.item-view {
+  background-color: white;
+  margin-bottom: 15rpx;
+  /*border: 1rpx solid #dddcdc;*/
+}
+
+/*top tab*/
+
+.top-tab {
+  height: 36px;
+  width: 750rpx;
+  border-top: 1rpx solid #dddcdc;
+  color: #7b7b7b;
+  font-size: 15px;
+  background-color: #f7f7f7;
+  z-index: 9999;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  position: fixed;
+  top: 0;
+}
+
+.top-tab .top-tab-item {
+  flex-grow: 1;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.top-tab-item.active {
+  border-bottom: 2px solid red;
+  color: red;
+}
+
+.bottom_refresh {
+  float: right;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+}
+
+.bottom_mode {
+  float: right;
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  font-size: 20px;
+  color: white;
+  background: gray;
+  opacity: 0.8;
+  border-radius: 25px;
+  padding: 1px;
+}
+
+.bottom-button-hover {
+  background-color: #575757;
+}

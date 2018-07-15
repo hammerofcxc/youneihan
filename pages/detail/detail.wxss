@@ -1,0 +1,39 @@
+@import "../../templates/msg_cell/msg_cell.wxss";
+@import "../../templates/msg_comment/msg_comment.wxss";
+@import "../../templates/best_comment/best_comment.wxss";
+
+
+.page {
+  background: white;
+}
+
+.cut-line {
+  height: 20rpx;
+  width: 100%;
+  background-color: lightgray;
+  float: right;
+}
+
+.comment-hot {
+  display: block;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  margin-left: 10px;
+  color: #909090;
+  background: white;
+}
+
+.comment-new {
+  display: block;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  margin-left: 10px;
+  color: #909090;
+  background: white;
+}
+
+
